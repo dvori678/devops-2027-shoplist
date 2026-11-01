@@ -1,0 +1,19 @@
+services:
+postgress:
+  image: postgress:15-alpine
+
+backend:
+  build:
+    context: ../app/backend
+
+stats:
+  build:
+    context: ../app/stats
+
+frontend:
+  build:
+    context: ../app/frontend
+
+volumes:
+
+postgress-data:
